@@ -4,65 +4,66 @@ title: Setup
 
 ## To install Kallisto (bash)
 
-Install the following pre-requisites (the following commands have been written so as to be chained together):
-
+Change directory to the Desktop.
 ```
-sudo apt-get install cmake -y;
-sudo apt-get install zlib1g-dev -y;
-sudo apt-get install autoconf -y;
-sudo apt-get install libhdf5-dev -y
+cd ~/Desktop
 ```
 
-Kallisto will be installed from the source files, which can be found on github or IVLE.  If you have
-github set up, go to your Desktop and download files using:
+Download kallisto by running the command below.  'linux' can be replaced with 'mac', or 'windows'
+depending on the system.
 ```
-git clone https://github.com/pachterlab/kallisto.git
-```
-Otherwise, they are in IVLE, under Practical materials, RNA-seq.  Unpack them into a folder called
-kallisto on the Desktop
-
-Moving to the source directory:
-```
-cd kallisto
-Make htslib
+wget https://github.com/pachterlab/kallisto/releases/download/v0.42.3/kallisto_linux-v0.45.0.tar.gz
 ```
 
-Run autoconf on ext/htslib: (note, this only needs to be done once, not when you recompile):
+Unpack the gzipped file using;
 ```
-cd ext/htslib
-autoheader
-autoconf
-cd ../..
+tar -zvxf kallisto_linux-v0.45.0.tar.gz 
 ```
 
-For old Linux systems, if you get an error reporting thread_pool.c:658:38: error: ‘PTHREAD_MUTEX_RECURSIVE’ undeclared (first use in this function).
-
-you might need to make htslib using this command in the htslib folder.
+By running 'ls', we a new folder in the Desktop.  This folder contains the Kallisto program.  Enter
+this folder by typing;
 ```
-make -j CFLAGS=-D_GNU_SOURCE lib-static
-Build kallisto
+cd kallisto_linux-v0.45.0
 ```
 
-Make a build directory and move there:
+**NOTE**
+If you are technically savy, and in your own time, you can try the method below under **OPTIONAL
+APPROACH** to make kallisto executable from anywhere.  For now, please follow the next step so that
+everyone is on the same page.
+
+One of the files in this folder is 'kallisto', and is what will enable the software programming we
+will be completing. Make a folder for today's practical in the Home directory and copy kallisto into
+it using the chained commands below.  Keep in mind that this particular command will only work if
+you are in the same directory as kallisto.
 ```
-mkdir build
-cd build
+mkdir ~/RNA-seq; cp ./kallisto ~/RNA-seq/
 ```
 
-Run cmake:
+**OPTIONAL APPROACH**
+For those who are technically savy, they can create alias in their .bashrc file.  You need to know
+the path to the folder containing kallisto for this (type 'pwd' when in the right directory).  Go to
+your home directory ('cd ~/'), and edit the .bashrc ('nano .bashrc').  Add this line somewhere:
 ```
-cmake ..
-```
-
-Build the code:
-```
-make
+alias kallisto='/path/to/folder/kallisto'
 ```
 
-The kallisto executable is now located in build/src. To install kallisto into the cmake install prefix path type:
+change /path/to/folder with the directory you found earlier using pwd.  Save the changes, close the
+text editor, and type this:
 ```
-make install
+source ~/.bashrc
 ```
+
+
+## Downloading today's files
+
+Once you have completed the above, download the files that will be used today 
+```
+wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
+wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz
+cat Homo_sapiens.GRCh38.cdna.all.fa.gz Homo_sapiens.GRCh38.ncrna.fa.gz > Homo_sapiens.GRCh38.rna.fa.gz
+```
+
+
 
 ## To install Sleuth (Rstudio)
 
@@ -77,7 +78,7 @@ Devtools should have been previously installed.  Install sleuth using:
 devtools::install_github("pachterlab/sleuth")
 ```
 
-Install devtools by:
+If devtools are missing, they can be installed by:
 ```
 install.packages("devtools")
 ```
@@ -86,7 +87,9 @@ install.packages("devtools")
 
 ## To learn more
 Kallisto has an offical page here: https://pachterlab.github.io/kallisto/
+
 Sleuth has an official page here: https://pachterlab.github.io/sleuth/
 
-(modified from https://pachterlab.github.io/kallisto/source)
+(modified from https://pachterlab.github.io/kallisto/source, and https://scilifelab.github.io/courses/rnaseq/labs/kallisto)
+
 {% include links.md %}
