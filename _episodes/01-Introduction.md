@@ -14,6 +14,3 @@ has improved speeds over previous approaches requiring alignment"
 
 # Introduction
 
-# Further information
-
-For those interested in learning more, the original paper [Link Text][] 
