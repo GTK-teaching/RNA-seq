@@ -44,6 +44,8 @@ expression analysis, such as limma and DESeq2, to analyze the Kallisto ouput.  T
 account for inherent variability as a result of Kallisto's transcript quantification.  Sleuth is
 still in development.
 
+As described above, Kallisto enables leveraging of technical replicates using bootstraps.
+
 It is important to note that Sleuth is an R package, designed to make use of its graphical
 capabilities.  At the end of this topic, we will introduce you to the graphical options available.
 
