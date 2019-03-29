@@ -12,7 +12,7 @@ cd ~/Desktop
 Download kallisto by running the command below.  'linux' can be replaced with 'mac', or 'windows'
 depending on the system.
 ```
-wget https://github.com/pachterlab/kallisto/releases/download/v0.42.3/kallisto_linux-v0.45.0.tar.gz
+wget https://github.com/pachterlab/kallisto/releases/download/v0.45.0/kallisto_linux-v0.45.0.tar.gz
 ```
 
 Unpack the gzipped file using;
@@ -27,8 +27,8 @@ cd kallisto_linux-v0.45.0
 ```
 
 **NOTE**
-If you are technically savy, and in your own time, you can try the method below under **OPTIONAL
-APPROACH** to make kallisto executable from anywhere.  For now, please follow the next step so that
+If you are technically savy, and in your own time, you can try the method below under _OPTIONAL
+APPROACH_ to make kallisto executable from anywhere.  For now, please follow the next step so that
 everyone is on the same page.
 
 One of the files in this folder is 'kallisto', and is what will enable the software programming we
@@ -56,12 +56,15 @@ source ~/.bashrc
 
 ## Downloading today's files
 
-Once you have completed the above, download the files that will be used today 
-```
-wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
-wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz
-cat Homo_sapiens.GRCh38.cdna.all.fa.gz Homo_sapiens.GRCh38.ncrna.fa.gz > Homo_sapiens.GRCh38.rna.fa.gz
-```
+Today's files should be in the kallisto file you downloaded earlier.  Go to the kallisto file you
+unpacked, and look for the folder 'Test'.
+
+<!-- Once you have completed the above, download the files that will be used today  -->
+<!-- ``` -->
+<!-- wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz -->
+<!-- wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz -->
+<!-- cat Homo_sapiens.GRCh38.cdna.all.fa.gz Homo_sapiens.GRCh38.ncrna.fa.gz > Homo_sapiens.GRCh38.rna.fa.gz -->
+<!-- ``` -->
 
 
 

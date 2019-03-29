@@ -1,0 +1,15 @@
+---
+title: "Using Kallisto and Sleuth"
+teaching: 15
+exercises: 0
+questions:
+objectives:
+keypoints:
+---
+
+
+
+
+```
+time kallisto/kallisto index -i hsGRCh38_kallisto Homo_sapiens.GRCh38.rna.fa.gz
+```
