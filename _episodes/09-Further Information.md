@@ -16,3 +16,6 @@ post on Kallisto by Lior Patcher (One of the authors of Kallisto)]
 
 ## RNA-seq
 
+## Bootstrap method
+[https://machinelearningmastery.com/a-gentle-introduction-to-the-bootstrap-method/][Bootstrap for
+machine learning] 

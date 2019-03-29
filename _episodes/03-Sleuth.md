@@ -10,4 +10,4 @@ keypoints:
 
 # Getting Started with Sleuth
 
-[Follow this link to the Sleuth Tutorial][https://pachterlab.github.io/sleuth_walkthroughs/trapnell/analysis.html] 
+[https://pachterlab.github.io/sleuth_walkthroughs/trapnell/analysis.html][Follow this link to the Sleuth Tutorial]
