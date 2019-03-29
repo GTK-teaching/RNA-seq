@@ -10,4 +10,4 @@ keypoints:
 
 # Getting started with Kallisto
 
-[Follow this link to the Kallisto tutorial][https://pachterlab.github.io/kallisto/starting] 
+[https://pachterlab.github.io/kallisto/starting][Follow this link to the Kallisto tutorial]
