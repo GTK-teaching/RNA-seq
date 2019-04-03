@@ -30,7 +30,7 @@ s2c <- read.table(file.path(main_work_dir, "hiseq_info.txt"),
 s2c
 ```
 
-To help sleuth understand what we wish to do, we will need to trim the relationship table.
+To help sleuth understand what we wish to do, we will need to trim the relationship tabl.e 
 
 ```
 #### NOTE TO STUDENTS:
