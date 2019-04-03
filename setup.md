@@ -54,31 +54,35 @@ source ~/.bashrc
 ```
 
 
+
 ## Downloading today's files
 
-Today's files should be in the kallisto file you downloaded earlier.  Go to the kallisto file you
-unpacked, and look for the folder 'Test'.
+Keep in mind that files generated using kallisto can be passed on to sleuth.  You can use the
+command
 
-<!-- Once you have completed the above, download the files that will be used today  -->
-<!-- ``` -->
-<!-- wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz -->
-<!-- wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz -->
-<!-- cat Homo_sapiens.GRCh38.cdna.all.fa.gz Homo_sapiens.GRCh38.ncrna.fa.gz > Homo_sapiens.GRCh38.rna.fa.gz -->
-<!-- ``` -->
+```
+wget DROPBOX-LINK
+```
+
+[https://www.dropbox.com/sh/n84n0n1i3sdi552/AAACLGmpM6cHiNF_MnXfwONDa?dl=0][For Kallisto files] 
+
+[https://www.dropbox.com/sh/diu7c7kmxec08bz/AAAZnRTjA2mlQwdnt060os5Ca?dl=0][For Sleuth files] 
 
 
 
 ## To install Sleuth (Rstudio)
 
-rhdf5 will be required from bioconductor to run sleuth.
+rhdf5 will be required from bioconductor to run sleuth.  Occasional first time installers may also
+need fs.
 ```
-source("http://bioconductor.org/biocLite.R")
-biocLite("rhdf5")
+BiocManager::install("rhdf5")
+install.packages("fs")
 ```
 
 Devtools should have been previously installed.  Install sleuth using:
 ```
 devtools::install_github("pachterlab/sleuth")
+library(sleuth)
 ```
 
 If devtools are missing, they can be installed by:

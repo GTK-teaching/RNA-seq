@@ -10,4 +10,17 @@ keypoints:
 
 # Getting started with Kallisto
 
-[https://pachterlab.github.io/kallisto/starting][Follow this link to the Kallisto tutorial]
+Build index
+
+```
+
+```
+
+
+Align files
+
+```
+
+```
+
+Make sure Kallisto generated files are all sent to a kallisto output.
