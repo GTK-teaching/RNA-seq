@@ -68,6 +68,8 @@ For Kallisto files: https://www.dropbox.com/sh/n84n0n1i3sdi552/AAACLGmpM6cHiNF_M
 
 For Sleuth files: https://www.dropbox.com/sh/diu7c7kmxec08bz/AAAZnRTjA2mlQwdnt060os5Ca?dl=0 
 
+Make sure to download/create sleuth output files in a folder called 'sleuth_files'.  This will help
+in processing during the sleuth part.
 
 
 ## To install Sleuth (Rstudio)

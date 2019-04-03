@@ -17,11 +17,11 @@ each replicate kallisto output and the relationship table.
 #----------|to load files|----------#
 
 # Different runs
-sample_id <- dir(file.path("..", "files"))
+sample_id <- dir(file.path("..", "sleuth_files"))
 
 # each replicate loaded
 kal_dirs <- sapply(sample_id, function(id)
-  file.path(main_work_dir, "files", id))
+  file.path(main_work_dir, "sleuth_files", id))
 kal_dirs
 
 # relationship table
@@ -68,3 +68,26 @@ models(so)
 ```
 
 # Understanding sleuth output
+
+An easy way to study the output of sleuth is to use the sleuth shiny app.  The app will
+auto-generate graphs for easy study of the results.
+
+## Quality check
+
+See graphs under diagnostics.  Four options are available:
+- bias weights
+- mean-variance plot
+- scatter plots
+- Q-Q plot
+
+Mean-variance plot
+
+![Mean-variance plot](../fig/mv-plot.png)
+
+Q-Q plot
+
+![Q-Q plot](../fig/Q-Q-plot.png)
+
+## Understanding the data
+
+To analyses your data, plots are available under the tab 'analysis'

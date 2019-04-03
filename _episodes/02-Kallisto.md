@@ -13,14 +13,12 @@ keypoints:
 Build index
 
 ```
-
+kallisto index -i transcripts.idx transcripts.fasta.gz
 ```
 
 
-Align files
+Quantification
 
 ```
 
 ```
-
-Make sure Kallisto generated files are all sent to a kallisto output.
