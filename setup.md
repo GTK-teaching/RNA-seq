@@ -64,9 +64,9 @@ command
 wget DROPBOX-LINK
 ```
 
-[https://www.dropbox.com/sh/n84n0n1i3sdi552/AAACLGmpM6cHiNF_MnXfwONDa?dl=0][For Kallisto files] 
+[For Kallisto files][https://www.dropbox.com/sh/n84n0n1i3sdi552/AAACLGmpM6cHiNF_MnXfwONDa?dl=0]
 
-[https://www.dropbox.com/sh/diu7c7kmxec08bz/AAAZnRTjA2mlQwdnt060os5Ca?dl=0][For Sleuth files] 
+[For Sleuth files][https://www.dropbox.com/sh/diu7c7kmxec08bz/AAAZnRTjA2mlQwdnt060os5Ca?dl=0] 
 
 
 
