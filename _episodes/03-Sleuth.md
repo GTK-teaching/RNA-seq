@@ -8,10 +8,25 @@ objectives:
 keypoints:
 ---
 
+# What is Sleuth?
+
+Sleuth is used for differential analysis of gene expression data.  Sleuth will be run using R.  The
+program makes use of Kallisto quantification and bootstrapping to improve statistical analysis.
+Sleuth overcomes problems previously faced in separating biological variance from inferential
+variance.  This leads to improved False Discovery Rates (FDR) in identifying the differentially expressed.
+
 # Getting Started with Sleuth
 
-The first step will be to load the files we need.  We will need to tell the computer where to find
-each replicate kallisto output and the relationship table.
+The files used here can be downloaded/generated as described in Setup, as well as how to set up Sleuth.
+
+The first step will be to load the files we need.  To make the script easier, lets tell R where to
+find the files.  Change the following to your path if needed.
+
+```
+work_dir <- "~/sleuth_files"
+```
+
+We will need to tell the computer where to find the kallisto output for each replicate.
 
 ```
 #----------|to load files|----------#
@@ -21,16 +36,20 @@ sample_id <- dir(file.path("..", "sleuth_files"))
 
 # each replicate loaded
 kal_dirs <- sapply(sample_id, function(id)
-  file.path(main_work_dir, "sleuth_files", id))
+  file.path(work_dir, "sleuth_files", id))
 kal_dirs
+```
 
+We also need to state the relationship table.  This can be found under `work_dir`
+
+```
 # relationship table
-s2c <- read.table(file.path(main_work_dir, "hiseq_info.txt"),
+s2c <- read.table(file.path(work_dir, "hiseq_info.txt"),
                   header = T, stringsAsFactors = F)
 s2c
 ```
 
-To help sleuth understand what we wish to do, we will need to trim the relationship tabl.e 
+To help sleuth understand what we wish to do, we will need to trim the relationship table. 
 
 ```
 #### NOTE TO STUDENTS:
@@ -43,7 +62,7 @@ s2c <- dplyr::mutate(s2c, path = kal_dirs)
 s2c
 ```
 
-We will now make a sleuth object.  The functions called here come out of the sleuth library we
+We will now make a sleuth object (so).  The functions called here come out of the sleuth library we
 attached earlier.
 
 ```
@@ -56,8 +75,7 @@ so <- sleuth_fit(so)
 so <- sleuth_wt(so, 'conditionscramble')
 ```
 
-The final step would be to call the R shiny app to help visualize the data.  If you wish to bypass
-this, the data can be saved using models(), and manipulated to your preference.
+The final step would be to call the R shiny app to help visualize the data.  The data can also be saved using models(), and visualized to your preference.
 
 ```
 # Visualize
