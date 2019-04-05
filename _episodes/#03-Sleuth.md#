@@ -102,13 +102,15 @@ See graphs under diagnostics.  Four options are available:
 - scatter plots
 - Q-Q plot
 
-Mean-variance plot
+**Mean-variance plot**
 
 ![Mean-variance plot](../fig/mv-plot.png)
 
-Q-Q plot
+
+**Q-Q plot**
 
 ![Q-Q plot](../fig/Q-Q-plot.png)
+
 
 ## Understanding the data
 

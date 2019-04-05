@@ -13,6 +13,7 @@ post on Kallisto by Lior Patcher (One of the authors of Kallisto)](https://liorp
 [Blog post comparing Kallisto and Salmon](http://robpatro.com/blog/?p=248)
 [Original paper for Kallisto](https://www.nature.com/articles/nbt.3519)
 [Paper describing Sleuth](https://www.biorxiv.org/content/10.1101/058164v1)
+[RNA-seq blog: RPKM, FPKM and TPM, clearly explained](https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/) 
 
 ## RNA-seq
 

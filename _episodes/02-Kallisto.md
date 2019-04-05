@@ -18,7 +18,7 @@ is measured in Transcripts per Million (TPM).
 
 # Getting started with Kallisto
 
-Files used here are downloaded as described in Setup, as well as how to set up Kallisto.
+Files used here are downloaded as described in Setup, as well as how kallisto was set up Kallisto.
 
 The first step will be to generate an index.  This will generate de bruijn graphs for k-mers.
 
@@ -30,13 +30,13 @@ Quantification is a long process for the files we have.  We will generate a bash
 enable kallisto quantification in the background.
 
 ```
-kallisto quant -i saccer3.idx -o wildtype.1 -b 200 SRR4018567_1.fastq SRR4018567_2.fastq
-kallisto quant -i saccer3.idx -o wildtype.2 -b 200 SRR4018568_1.fastq SRR4018568_2.fastq
-kallisto quant -i saccer3.idx -o wildtype.3 -b 200 SRR4018569_1.fastq SRR4018569_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o wildtype.1 -b 30 SRR4018567_1.fastq SRR4018567_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o wildtype.2 -b 30 SRR4018568_1.fastq SRR4018568_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o wildtype.3 -b 30 SRR4018569_1.fastq SRR4018569_2.fastq
 
-kallisto quant -i saccer3.idx -o snf2.mutant.1 -b 200 SRR4018573_1.fastq SRR4018573_2.fastq
-kallisto quant -i saccer3.idx -o snf2.mutant.2 -b 200 SRR4018574_1.fastq SRR4018574_2.fastq
-kallisto quant -i saccer3.idx -o snf2.mutant.3 -b 200 SRR4018575_1.fastq SRR4018575_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o snf2.mutant.1 -b 30 SRR4018573_1.fastq SRR4018573_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o snf2.mutant.2 -b 30 SRR4018574_1.fastq SRR4018574_2.fastq
+kallisto quant -t 4 -i saccer3.idx -o snf2.mutant.3 -b 30 SRR4018575_1.fastq SRR4018575_2.fastq
 ```
 
 # Understanding Kallisto output
@@ -49,7 +49,7 @@ This file contains the bootstrap information.
 
 
 
-## Three parts
+<!-- ## Three parts -->
 
 <!-- Kallisto can be divided into three parts: -->
 
@@ -62,3 +62,6 @@ This file contains the bootstrap information.
 ## TPMS
 
 Results of Kallisto readings are in TPM.  TPM normalizes the data.
+
+18:03.09
+13:39.74
