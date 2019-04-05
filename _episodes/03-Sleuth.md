@@ -17,17 +17,18 @@ variance.  This leads to improved False Discovery Rates (FDR) in identifying the
 
 # Getting Started with Sleuth
 
-The files used here can be downloaded/generated as described in Setup, as well as how sleuth was set up.
+The files used here can be downloaded as described in Setup, as well as how sleuth was set up.
 
-The first step will be to load the files we need.  To make the script easier, lets tell R where to
-find the files.  
+If continuing with outputs from kallisto, move the output folders into
+`~/Desktop/RNA-seq/Sleuth_files`.
 
-Make a new folder on your Desktop, and call it `sleuth_files`.  Move the Kallisto outputs to this file.
+The following commands are completed using Rstudio.  The first step will be to load the files we
+need.  To make the script easier, lets tell R where to find the files.
   
 Tell R where to find your files with the following command.
 
 ```
-work_dir <- "~/Desktop/sleuth_files"
+work_dir <- "~/Desktop/RNA-seq/sleuth_files"
 ```
 
 We will need to tell the computer where to find the kallisto output for each replicate.
@@ -36,11 +37,11 @@ We will need to tell the computer where to find the kallisto output for each rep
 #----------|to load files|----------#
 
 # Different runs
-sample_id <- dir(file.path("..", "sleuth_files"))
+sample_id <- dir(file.path(work_dir))
 
 # each replicate loaded
 kal_dirs <- sapply(sample_id, function(id)
-  file.path(work_dir, "sleuth_files", id))
+  file.path(work_dir, id))
 kal_dirs
 ```
 
@@ -48,7 +49,7 @@ We also need to state the relationship table.  This can be found under `work_dir
 
 ```
 # relationship table
-s2c <- read.table(file.path(work_dir, "hiseq_info.txt"),
+s2c <- read.table(file.path(work_dir, "..", "hiseq_info.txt"),
                   header = T, stringsAsFactors = F)
 s2c
 ```
@@ -102,13 +103,18 @@ See graphs under diagnostics.  Four options are available:
 - scatter plots
 - Q-Q plot
 
-Mean-variance plot
+These graphs can be used in completing a quality check and ensuring that your reads have been
+properly filtered.
+
+**Mean-variance plot**
 
 ![Mean-variance plot](../fig/mv-plot.png)
 
-Q-Q plot
+
+**Q-Q plot**
 
 ![Q-Q plot](../fig/Q-Q-plot.png)
+
 
 ## Understanding the data
 

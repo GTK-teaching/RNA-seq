@@ -48,20 +48,6 @@ of how kallisto was run.  The HDF5 file contains information used in differentia
 This file contains the bootstrap information.
 
 
-
-<!-- ## Three parts -->
-
-<!-- Kallisto can be divided into three parts: -->
-
-<!-- 1. Indexing -->
-<!-- 2. Pseudo-alignment -->
-<!-- 3. Quantification -->
-
-
-
-## TPMS
+## TPM
 
 Results of Kallisto readings are in TPM.  TPM normalizes the data.
-
-18:03.09
-13:39.74

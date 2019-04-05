@@ -4,16 +4,24 @@ title: Setup
 
 ## Downloading today's files
 
-Keep in mind that files generated using kallisto can be passed on to sleuth.  When practicing on
-your own time, you can download the files under the sluth dropbox link to work only with sleuth.
+On the desktop, make a folder called `RNA-seq`.  Make another folder called `sleuth_files` inside `RNA-seq`.
 
-To download, go to the following link and download the Zip file.
+```
+cd ~/Desktop
+mkdir RNA-seq
+cd RNA-seq
+mkdir sleuth_files
+```
+
+Download the zipped file in the kallisto dropbox link below.  From the sleuth dropbox link,
+only download the `hi_seq.txt` file if you are not jumping straight into the sleuth part of the
+tutorial.  Unzip the kallisto dropbox file into the `~/Desktop/RNA-seq` folder made earlier.  Move
+the `hi_seq.txt` file into `~/Desktop/RNA-seq`.
 
 For Kallisto files: https://www.dropbox.com/sh/n84n0n1i3sdi552/AAACLGmpM6cHiNF_MnXfwONDa?dl=0
 
 For Sleuth files: https://www.dropbox.com/sh/diu7c7kmxec08bz/AAAZnRTjA2mlQwdnt060os5Ca?dl=0 
 
-Unzip the kallisto files to a folder on your Desktop, and name it 'RNA-seq'
 
 
 ## To install Kallisto (bash)
@@ -40,33 +48,14 @@ this folder by typing;
 cd kallisto_linux-v0.45.0
 ```
 
-**NOTE**
-If you are technically savy, and in your own time, you can try the method below under _OPTIONAL
-APPROACH_ to make kallisto executable from anywhere.  For now, please follow the next step so that
-everyone is on the same page.
+To make linux recognize the kallisto program and to make it executable from any folder, copy the
+kallisto program into `/usr/local/bin/`.  The program will have to be made into an executable.
 
-One of the files in this folder is 'kallisto', and is what will enable the software programming we
-will be completing. Make a folder for today's practical in the Home directory and copy kallisto into
-it using the chained commands below.  Keep in mind that this particular command will only work if
-you are in the same directory as kallisto.
 ```
-mkdir ~/RNA-seq; cp ./kallisto ~/RNA-seq/
+sudo cp kallisto /usr/local/bin/
+cd /usr/local/bin/
+sudo chmod +x kallisto
 ```
-
-**OPTIONAL APPROACH**
-For those who are technically savy, they can create alias in their .bashrc file.  You need to know
-the path to the folder containing kallisto for this (type 'pwd' when in the right directory).  Go to
-your home directory ('cd ~/'), and edit the .bashrc ('nano .bashrc').  Add this line somewhere:
-```
-alias kallisto='/path/to/folder/kallisto'
-```
-
-change /path/to/folder with the directory you found earlier using pwd.  Save the changes, close the
-text editor, and type this:
-```
-source ~/.bashrc
-```
-
 
 
 

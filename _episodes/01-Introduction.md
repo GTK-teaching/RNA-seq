@@ -31,7 +31,8 @@ done at the transcript level instead of gene level as with previous aligners.
 ![**Fig.1** Alt TextOverview of kallisto. The input consists of a reference transcriptome and reads from an RNA-seq experiment. (a) An example of a read (in black) and three overlapping transcripts with exonic regions as shown. (b) An index is constructed by creating the transcriptome de Bruijn Graph (T-DBG) where nodes (v1, v2, v3, … ) are k-mers, each transcript corresponds to a colored path as shown and the path cover of the transcriptome induces a k-compatibility class for each k-mer. (c) Conceptually, the k-mers of a read are hashed (black nodes) to find the k-compatibility class of a read. (d) Skipping (black dashed lines) uses the information stored in the T-DBG to skip k-mers that are redundant because they have the same k-compatibility class. (e) The k-compatibility class of the read is determined by taking the intersection of the k-compatibility classes of its constituent k-mers.  [From Bray et al. Near-optimal probabilistic RNA-seq quantification, Nature Biotechnology, 2016.]](../fig/deBruijn.png) 
 
 An advantage of using kallisto is bootstrapping.  Bootstrapping can be used to improve statistical
-deductions.  This is used during differential expression analysis in sleuth.
+deductions.  This is used during differential expression analysis in sleuth.  A disadvantage is that
+as kallisto uses pseudo-alignment, it is not as capable in quantifying unknown or novel transcripts.
 
 ## Sleuth
 
