@@ -42,7 +42,3 @@ replicate data in determining differentially expressing genes.
 
 It is important to note that Sleuth is an R package, designed to make use of its graphical
 capabilities.  At the end of this topic, we will introduce you to the graphical options available.
-
-
-(This explanation was taken from
-[https://scilifelab.github.io/courses/rnaseq/labs/kallisto][SciLifeLab github website] 
